@@ -62,7 +62,6 @@ public class ActualAndroidNFCActivity extends BaseActivity  implements NfcAdapte
             Intent intent = new Intent(Settings.ACTION_NFC_SETTINGS);
             startActivity(intent);
         }
-//        nfcAdapter.setNdefPushMessageCallback(this, this);
 
     }
     @Override
@@ -74,63 +73,8 @@ public class ActualAndroidNFCActivity extends BaseActivity  implements NfcAdapte
             Log.e(TAG, "EXECUTE ON-RESUME SUCCESS");
             handleIntent(getIntent());
         }
-//        onResume1();
-//        initialize();
-//        onResume2();
+
     }
-
-    private void onResume2(){
-        Intent intent = new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(
-                this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-
-        IntentFilter[] filters = new IntentFilter[] {
-                new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED),
-                new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED),
-                new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED)
-        };
-
-        nfcAdapter.enableForegroundDispatch(this, pendingIntent, filters, null);
-        Log.e(TAG,"ON RESUME CALLED 1 =======> "+intent.getAction());
-    }
-
-    private void onResume1() {
-        Log.e(TAG,"ON RESUME CALLED 1 =======> "+nfcAdapter);
-
-        if (nfcAdapter != null) {
-            nfcAdapter.enableReaderMode(this, tag -> {
-                        // Handle the discovered tag
-                        Log.e(TAG, "Tag discovered: " + tag.toString());
-                    },
-                    NfcAdapter.FLAG_READER_NFC_A | NfcAdapter.FLAG_READER_NFC_B |
-                            NfcAdapter.FLAG_READER_NFC_F | NfcAdapter.FLAG_READER_NFC_V,
-                    null);
-        }
-        Log.e(TAG,"ON RESUME CALLED =======> "+getIntent());
-        // Create Pending Intent for NFC Tag Detection
-        PendingIntent pendingIntent = PendingIntent.getActivity(
-                this, 0,
-                new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-        Log.e(TAG,"ON PENDING INTENT =======> "+pendingIntent.getIntentSender());
-
-        // Setup intent filters for NDEF, TECH, and TAG discovery
-        IntentFilter[] intentFilters = new IntentFilter[]{
-                new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED),
-                new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED),
-                new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED)
-        };
-
-        nfcAdapter.enableForegroundDispatch(this, pendingIntent, intentFilters, null);
-        Log.e(TAG,"ON AFTER FINISH BACKGROUND =======> "+getIntent().getAction());
-        if (NfcAdapter.ACTION_TECH_DISCOVERED.equals(getIntent().getAction())) {
-            Log.e(TAG, "EXECUTE ON-RESUME SUCCESS NOW");
-            handleIntent(getIntent());
-        }
-    }
-
 
     @Override
     protected void onPause() {
@@ -170,40 +114,9 @@ public class ActualAndroidNFCActivity extends BaseActivity  implements NfcAdapte
 
     private void readFromTag(Tag tag) {
 
-//        Ndef ndef = Ndef.get(tag);
-//        Log.e(TAG,"NDEF DETECTED: "+ndef);
-//
-//        if (ndef != null) {
-//            try {
-//                ndef.connect();
-//                NdefMessage ndefMessage = ndef.getNdefMessage();
-//                NdefRecord[] records = ndefMessage.getRecords();
-//
-//                for (NdefRecord record : records) {
-//                    if (record.getTnf() == NdefRecord.TNF_WELL_KNOWN &&
-//                            Arrays.equals(record.getType(), NdefRecord.RTD_TEXT)) {
-//                        String payload = new String(record.getPayload(), StandardCharsets.UTF_8);
-//                        Log.e(TAG,"TAG CONTENT: "+payload);
-//
-//                        textTagContent.setText("Tag Content: " + payload);
-//                    }
-//                }
-//                ndef.close();
-//            } catch (Exception e) {
-//                Log.e(TAG, "Error reading NFC tag", e);
-//                Toast.makeText(this, "Error reading NFC tag: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        }
-
-
-
         long startTime = System.currentTimeMillis();
-//        Bundle tag = intent.getExtras();
-//        Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
         if (tag == null) return;
         Log.e(TAG, "TAG IS "+tag);
-
-//        String content = StringUtil.toHexString(((Tag) tag.get("android.nfc.extra.TAG")).getId());
 
         String[] techList = tag.getTechList();
         String data = tag.toString();
@@ -217,7 +130,6 @@ public class ActualAndroidNFCActivity extends BaseActivity  implements NfcAdapte
             Log.e(TAG, "DATA IS "+data);
         }
         textTagContent.setText("Tag Content: " + data);
-//        binding.tvShowNfc.setText(data);
     }
 
     @Override

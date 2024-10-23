@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.telpo.tps550.api.demo.customize.DeliveryLocker.LockerControlActivity"
+android:orientation="vertical"
+android:padding="16dp">
+
+<TextView
+    android:id="@+id/lockerStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/locker_status_unknown"
+    android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_to_locker" />
+
+    <Button
+        android:id="@+id/disConnectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/disconnect_from_locker" />
+
+<Button
+    android:id="@+id/unlockButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/unlock_locker" />
+
+<Button
+    android:id="@+id/lockButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/lock_locker" />
+</LinearLayout>

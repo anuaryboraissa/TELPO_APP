@@ -15,7 +15,7 @@ public class AppFunctionality {
             new MyItem("NFC (Near Field Communication) Test","The NFC interface allows for contactless communication, enabling the terminal to interact with NFC-enabled devices and cards", AppConstants.nfc,2),
             new MyItem("Barcode and QR Code Scanner Test","The device is equipped with a barcode/QR code scanner that allows for quick scanning of product codes", AppConstants.barcodeQrCode,3),
             new MyItem("E-wallet Integration Test","allowing users to manage digital wallets.", AppConstants.eWalletIntegration,5),
-            new MyItem("Camera Test","The terminal's built-in camera can be used for capturing images or scanning QR codes", AppConstants.camera,6),
+            new MyItem("Camera Test","The terminal's built-in camera can be used for capturing images", AppConstants.camera,6),
             new MyItem("LED Indicator Test","The LED lights can be controlled to provide visual notification", AppConstants.ledIndicator,7),
             new MyItem("GPIO (General Purpose Input/Output) Test","GPIO ports allow the terminal to control external devices or peripherals.", AppConstants.gpid,8),
             new MyItem("Audio Output","The terminal includes an audio jack that can be used for audio feedback.", AppConstants.audioOutput,9),

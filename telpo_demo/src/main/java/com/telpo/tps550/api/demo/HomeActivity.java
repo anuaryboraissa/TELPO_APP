@@ -37,6 +37,7 @@ import com.telpo.tps550.api.demo.can.Can2DeptActivity;
 import com.telpo.tps550.api.demo.can.CanActivity;
 import com.telpo.tps550.api.demo.customize.Adapters.HomeListAdapter;
 import com.telpo.tps550.api.demo.customize.DefaultActivity;
+import com.telpo.tps550.api.demo.customize.DeliveryLocker.LockerControlActivity;
 import com.telpo.tps550.api.demo.customize.Models.MyItem;
 import com.telpo.tps550.api.demo.customize.PowerManagementActivity;
 import com.telpo.tps550.api.demo.customize.Repositories.AppFunctionality;
@@ -159,7 +160,9 @@ public void deviceWifiCellular(){
     startActivity(new Intent(HomeActivity.this, WifiTestActivity.class));
 }
     public void deviceDeliveryLocker(){
-        startActivity(new Intent(HomeActivity.this, DeliverylockerActivity.class));
+//        LockerControlActivity
+//        startActivity(new Intent(HomeActivity.this, DeliverylockerActivity.class));
+        startActivity(new Intent(HomeActivity.this, LockerControlActivity.class));
     }
 
     public void devicePowerControl(){
@@ -307,28 +310,29 @@ public void deviceWifiCellular(){
        startActivity(new Intent(HomeActivity.this, PsamCardActivity.class));
    }
    public void deviceNfc(){
-       AlertDialog.Builder dialog = new AlertDialog.Builder(HomeActivity.this);
-       dialog.setTitle(getString(R.string.nfc_xzgn));
-       dialog.setMessage(getString(R.string.nfc_xznfcsbfs));
-       dialog.setNegativeButton(R.string.nfc_ys, new DialogInterface.OnClickListener() {
-           public void onClick(DialogInterface dialogInterface, int i) {
-               //use camera
-               startActivity(new Intent(HomeActivity.this, ActualAndroidNFCActivity.class));
-           }
-       });
-       dialog.setNeutralButton(R.string.nfc_telpo, new DialogInterface.OnClickListener() {
-           @Override
-           public void onClick(DialogInterface dialog, int which) {
-               startActivity(new Intent(HomeActivity.this, NewCustomNFCActivity.class));
-           }
-       });
-       dialog.setPositiveButton(R.string.nfc_telpo_pn512, new DialogInterface.OnClickListener() {
-           public void onClick(DialogInterface dialogInterface, int i) {
-               startActivity(new Intent(HomeActivity.this, NfcPN512ActivityMain.class));
-           }
-       });
-       dialog.show();
+//       AlertDialog.Builder dialog = new AlertDialog.Builder(HomeActivity.this);
+//       dialog.setTitle(getString(R.string.nfc_xzgn));
+//       dialog.setMessage(getString(R.string.nfc_xznfcsbfs));
+//       dialog.setNegativeButton(R.string.nfc_ys, new DialogInterface.OnClickListener() {
+//           public void onClick(DialogInterface dialogInterface, int i) {
+//               //use camera
+//               startActivity(new Intent(HomeActivity.this, ActualAndroidNFCActivity.class));
+//           }
+//       });
+//       dialog.setNeutralButton(R.string.nfc_telpo, new DialogInterface.OnClickListener() {
+//           @Override
+//           public void onClick(DialogInterface dialog, int which) {
+//               startActivity(new Intent(HomeActivity.this, NewCustomNFCActivity.class));
+//           }
+//       });
+//       dialog.setPositiveButton(R.string.nfc_telpo_pn512, new DialogInterface.OnClickListener() {
+//           public void onClick(DialogInterface dialogInterface, int i) {
+//               startActivity(new Intent(HomeActivity.this, NfcPN512ActivityMain.class));
+//           }
+//       });
+//       dialog.show();
 //       startActivity(new Intent(HomeActivity.this, ActualAndroidNFCActivity.class));
+       startActivity(new Intent(HomeActivity.this, ActualAndroidNFCActivity.class));
 
    }
 

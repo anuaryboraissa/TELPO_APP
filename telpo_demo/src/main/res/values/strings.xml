@@ -773,6 +773,11 @@
     <string name="release_wake_lock_r">Release Wake Lock</string>
     <string name="check_battery_status_r">Check Battery Status</string>
     <string name="schedule_wake_up_alarm_r">Schedule Wake-Up Alarm</string>
+    <string name="lock_locker">Lock Locker</string>
+    <string name="unlock_locker">Unlock Locker</string>
+    <string name="locker_status_unknown">Locker Status: Unknown</string>
+    <string name="connect_to_locker">Connect to Locker</string>
+    <string name="disconnect_from_locker">Disconnect From Locker</string>
 
 
 </resources>

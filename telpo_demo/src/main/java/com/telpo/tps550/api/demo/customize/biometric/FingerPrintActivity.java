@@ -39,7 +39,6 @@ public class FingerPrintActivity extends BaseActivity2 {
         // Initialize biometric authentication
         checkBiometricSupport();
         showBiometricPrompt();
-
         // Retry button logic
         btnRetry.setOnClickListener(v -> showBiometricPrompt());
     }
