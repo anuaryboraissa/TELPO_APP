@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- res/layout/activity_wallet.xml -->
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+tools:context="com.telpo.tps550.api.demo.customize.nfc.CustomEWalletActivity"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp">
+
+<EditText
+    android:id="@+id/init_money1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Initial Money" />
+
+<Button
+    android:id="@+id/init_wallet1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="CUSTOM_INIT_WALLET"
+    android:text="Initialize Wallet" />
+
+<EditText
+    android:id="@+id/deal_money1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Amount for Transaction" />
+
+<Button
+    android:id="@+id/deal_wallet1"
+    android:onClick="CUSTOM_READ_WALLET"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Perform Transaction" />
+    <Button
+        android:id="@+id/wallet_type1"
+        android:layout_width="match_parent"
+        android:onClick="CUSTOM_WRITE_WALLET"
+        android:layout_height="wrap_content"
+        android:text="Wallet type"/>
+
+    <Button
+        android:id="@+id/wallet_type11"
+        android:layout_width="match_parent"
+        android:onClick="CUSTOM_TRANSFER"
+        android:layout_height="wrap_content"
+        android:text="TRANSFER"/>
+    <Button
+        android:id="@+id/wallet_type12"
+        android:layout_width="match_parent"
+        android:onClick="CUSTOM_RESTORE"
+        android:layout_height="wrap_content"
+        android:text="RESTORE"/>
+<TextView
+    android:id="@+id/show_result1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Result will be shown here" />
+
+
+</LinearLayout>

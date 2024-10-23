@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.telpo.tps550.api.demo.customize.PowerManagementActivity"
+android:padding="16dp">
+
+    <TextView
+        android:id="@+id/battery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/battery_level_unknown_r"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/wake_lock_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wake_lock_status_unknown_r"
+        android:textSize="18sp"
+        android:layout_below="@id/battery_status"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/acquire_wake_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acquire_wake_lock_r"
+        android:layout_below="@id/wake_lock_status"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/release_wake_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/release_wake_lock_r"
+        android:layout_below="@id/acquire_wake_lock"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/check_battery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_battery_status_r"
+        android:layout_below="@id/release_wake_lock"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/schedule_wake_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_wake_up_alarm_r"
+        android:layout_below="@id/check_battery_status"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

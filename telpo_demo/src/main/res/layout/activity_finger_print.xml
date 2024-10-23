@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:padding="16dp"
+xmlns:tools="http://schemas.android.com/tools"
+android:background="@android:color/white"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.telpo.tps550.api.demo.customize.biometric.FingerPrintActivity"
+    >
+<!-- App Logo -->
+<ImageView
+    android:id="@+id/app_logo"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:layout_centerHorizontal="true"
+    android:contentDescription="@string/auth"
+    android:src="@drawable/ic_authentication"
+    android:layout_marginTop="80dp" />
+<!-- Status Message -->
+<TextView
+    android:id="@+id/tv_status"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/app_logo"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
+    android:textSize="18sp"
+    android:textColor="@android:color/black"
+    android:text="@string/authenticate_with_fingerprint" />
+<!-- Retry Button (Visible on Failure) -->
+<Button
+    android:id="@+id/btn_retry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tv_status"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="24dp"
+    android:text="@string/retry"
+    android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:padding="16dp"
+tools:context="com.telpo.tps550.api.demo.customize.print.PrintingActivity"
+    >
+<Button
+    android:id="@+id/btnPrintText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Print Text" />
+
+<Button
+    android:id="@+id/btnPrintImage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Print Image" />
+
+<Button
+    android:id="@+id/btnPrintPDF"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Print PDF" />
+
+<ImageView
+    android:id="@+id/printPreview"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:contentDescription="Image Preview"
+    android:scaleType="centerInside" />
+</LinearLayout>

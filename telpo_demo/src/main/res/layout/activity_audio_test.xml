@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.telpo.tps550.api.demo.customize.audio.AudioTestActivity"
+android:orientation="vertical"
+android:padding="16dp">
+
+<Button
+    android:id="@+id/btn_record"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Start Recording" />
+
+<TextView
+    android:id="@+id/tv_recordings"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Saved Recordings"
+    android:textSize="18sp"
+    android:layout_marginTop="16dp" />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp" />
+</LinearLayout>

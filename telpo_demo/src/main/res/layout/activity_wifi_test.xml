@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.telpo.tps550.api.demo.customize.WifiTestActivity"
+android:orientation="vertical"
+android:padding="16dp">
+
+<TextView
+    android:id="@+id/wifiStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Wi-Fi Status: Unknown"
+    android:textSize="18sp" />
+
+<TextView
+    android:id="@+id/cellularStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cellular Status: Unknown"
+    android:textSize="18sp" />
+
+<Button
+    android:id="@+id/testWifiButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Test Wi-Fi Connectivity" />
+
+<Button
+    android:id="@+id/testCellularButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Test Cellular Connectivity" />
+</LinearLayout>
