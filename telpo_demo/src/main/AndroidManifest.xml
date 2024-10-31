@@ -141,6 +141,7 @@
             android:exported="false" />
         <activity
             android:name="com.telpo.tps550.api.demo.HomeActivity"
+            android:theme="@style/AppTheme2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

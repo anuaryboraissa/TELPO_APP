@@ -6,26 +6,71 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.common.demo.R;
 import com.telpo.tps550.api.demo.HomeActivity;
 import com.telpo.tps550.api.demo.customize.Models.MyItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeListAdapter extends ArrayAdapter<MyItem> {
     private final HomeActivity context;
-    private final List<MyItem> items;
-
+//    private final List<MyItem> items;
+    private List<MyItem> originalItems;
+    private List<MyItem> filteredItems;
     public HomeListAdapter(HomeActivity context, List<MyItem> items) {
         super(context, R.layout.list_item, items);
         this.context = context;
-        this.items = items;
+        this.originalItems = new ArrayList<>(items); // Save original list
+        this.filteredItems = items;
+    }
+    @Override
+    public int getCount() {
+        return filteredItems.size();
     }
 
+    @Override
+    public MyItem getItem(int position) {
+        return filteredItems.get(position);
+    }
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String charString = constraint.toString().toLowerCase();
+                FilterResults results = new FilterResults();
+
+                if (charString.isEmpty()) {
+                    filteredItems = new ArrayList<>(originalItems); // No filter applied
+                } else {
+                    List<MyItem> filteringList = new ArrayList<>();
+                    for (MyItem item : originalItems) {
+                        // Filter based on title and description
+                        if (item.getTitle().toLowerCase().contains(charString) ||
+                                item.getDescription().toLowerCase().contains(charString)) {
+                            filteringList.add(item);
+                        }
+                    }
+                    filteredItems = filteringList;
+                }
+
+                results.values = filteredItems;
+                results.count = filteredItems.size();
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                filteredItems = (List<MyItem>) results.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -36,7 +81,7 @@ public class HomeListAdapter extends ArrayAdapter<MyItem> {
         TextView title = convertView.findViewById(R.id.textViewTitle);
         TextView description = convertView.findViewById(R.id.textViewDescription);
         ImageView imageView =convertView.findViewById(R.id.imageViewLeading);
-        MyItem item = items.get(position);
+        MyItem item = filteredItems.get(position);
         title.setText(item.getTitle());
         description.setText(item.getDescription());
         imageView.setImageResource(item.getResId());
@@ -133,11 +178,8 @@ public class HomeListAdapter extends ArrayAdapter<MyItem> {
                     // Pass data to SecondActivity
                 }
                 // Handle the click event
-
-
         });
         return convertView;
     }
-
 
 }

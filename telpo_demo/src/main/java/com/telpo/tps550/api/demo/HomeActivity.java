@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.common.apiutil.util.SystemUtil;
 import com.common.demo.R;
@@ -60,7 +61,7 @@ public class HomeActivity extends BaseActivity {
         requestPermission();
 
         //SET LISTVIEW
-
+        SearchView searchView = findViewById(R.id.search_view);
         ListView listView=findViewById((R.id.listView));
 
         List<MyItem> items= AppFunctionality.functionalities;
@@ -68,6 +69,23 @@ public class HomeActivity extends BaseActivity {
         HomeListAdapter adapter = new HomeListAdapter(this, items);
         listView.setAdapter(adapter);
         checkDialog = new ProgressDialog(HomeActivity.this);
+
+
+        // Set up search functionality
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // You can perform an action on submit if needed
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
     }
     //print
     public void devicePrint(){
