@@ -33,4 +33,9 @@ android:padding="16dp">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Test Cellular Connectivity" />
+    <Button
+        android:id="@+id/testEthernet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Ethernet Connectivity" />
 </LinearLayout>

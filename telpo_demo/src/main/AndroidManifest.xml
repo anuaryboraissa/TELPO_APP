@@ -43,8 +43,7 @@
         android:name="android.hardware.bluetooth_le"
         android:required="true" />
 
-    <uses-permission android:name="android.permission.POWER_SAVE_MODE" />
-<!--    <uses-permission android:name="android.permission.BATTERY_STATS" />-->
+    <uses-permission android:name="android.permission.POWER_SAVE_MODE" /> <!-- <uses-permission android:name="android.permission.BATTERY_STATS" /> -->
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -65,7 +64,6 @@
     <uses-permission android:name="android.permission.ACCESS_USB" />
 
     <application
-        android:name="com.telpo.tps550.api.demo.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -73,6 +71,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name="com.telpo.tps550.api.demo.customize.EthernetTestActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.telpo.tps550.api.demo.customize.cards.SIMCardDetectionActivity"
+            android:exported="false" />
         <activity
             android:name="com.telpo.tps550.api.demo.customize.DeliveryLocker.LockerControlActivity"
             android:exported="false" />
@@ -131,15 +135,7 @@
         <activity
             android:name="com.telpo.tps550.api.demo.customize.camera.CameraActivity"
             android:exported="false" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.customize.nfc.NewCustomNFCActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.customize.nfc.CustomEWalletActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.customize.nfc.CustomNFCActivity"
-            android:exported="false" />
+
         <activity
             android:name="com.telpo.tps550.api.demo.customize.DefaultActivity"
             android:exported="false" />
@@ -170,9 +166,7 @@
             android:exported="false"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.MainActivity"
-            android:exported="true" />
+
         <activity
             android:name="com.telpo.tps550.api.demo.printer.UsbPrinterActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -424,16 +418,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.pos.InterfaceActivityMain"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+
         <activity
             android:name="com.telpo.tps550.api.demo.pos.GpioActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -534,10 +519,13 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-
-        <meta-data
-            android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
-            android:resource="@xml/device_filter" />
+        <receiver android:name="com.telpo.tps550.api.demo.customize.Ethernet.EthernetStateReceiver"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

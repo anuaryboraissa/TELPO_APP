@@ -57,9 +57,6 @@ public class HomeListAdapter extends ArrayAdapter<MyItem> {
                         case 3:
                             context.deviceQrCodeTest();
                             break;
-                        case 5:
-                            context.deviceCustomEWallet();
-                            break;
                         case 6:
                             context.deviceCamera();
                             break;

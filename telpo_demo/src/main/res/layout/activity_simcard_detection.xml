@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.telpo.tps550.api.demo.customize.cards.SIMCardDetectionActivity"
+android:padding="16dp"
+android:background="#ffffff">
+
+<TextView
+    android:id="@+id/tvSimStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/sim_status"
+    android:textSize="22sp"
+    android:textColor="#000000"
+    android:layout_alignParentTop="true" />
+
+<ListView
+    android:id="@+id/lvSimDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tvSimStatus"
+    android:layout_marginTop="20dp"
+    android:divider="@android:color/darker_gray"
+    android:dividerHeight="1dp" />
+
+</RelativeLayout>

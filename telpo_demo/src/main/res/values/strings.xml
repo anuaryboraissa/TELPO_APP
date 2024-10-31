@@ -778,6 +778,13 @@
     <string name="locker_status_unknown">Locker Status: Unknown</string>
     <string name="connect_to_locker">Connect to Locker</string>
     <string name="disconnect_from_locker">Disconnect From Locker</string>
+    <string name="sim_status">SIM Status</string>
+    <string name="ethernet_status_unknown">Ethernet Status: Unknown</string>
+    <string name="run_ping_test">Run Ping Test</string>
+    <string name="ping_result_n_a">Ping Result: N/A</string>
+    <string name="ethernet_status_connected">Ethernet Status: Connected</string>
+    <string name="ping_result">Ping Result:\n</string>
+    <string name="ping_failed_please_check_the_ethernet_connection">Ping Failed. Please check the Ethernet connection.</string>
 
 
 </resources>

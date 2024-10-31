@@ -18,7 +18,7 @@
             android:id="@+id/btn_serial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="打开串口"
+            android:text="Open Serial Port"
             android:background="@drawable/button_number_violet_shape"
             style="@style/buttonNumberStyle"
             android:layout_marginBottom="10dp"/>
@@ -27,7 +27,7 @@
             android:id="@+id/btn_getState"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="获取芯片状态"
+            android:text="Get Chip Status"
             android:background="@drawable/button_number_violet_shape"
             style="@style/buttonNumberStyle"
             android:layout_marginBottom="10dp"/>
@@ -36,7 +36,7 @@
             android:id="@+id/btn_setkey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="保存密钥"
+            android:text="Save Key"
             android:background="@drawable/button_number_violet_shape"
             style="@style/buttonNumberStyle"
             android:layout_marginBottom="10dp"/>
@@ -45,7 +45,7 @@
             android:id="@+id/btn_encrypt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SM4 ECB 加密/解密"
+            android:text="SM4 ECB Encryption/Decryption"
             android:background="@drawable/button_number_violet_shape"
             style="@style/buttonNumberStyle"
             android:layout_marginBottom="10dp"/>
@@ -54,7 +54,7 @@
             android:id="@+id/btn_get_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="获取状态"
+            android:text="Get Status"
             android:background="@drawable/button_number_violet_shape"
             style="@style/buttonNumberStyle"
             android:layout_marginBottom="10dp"/>
@@ -63,7 +63,7 @@
             android:id="@+id/btn_upgrade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="升级成 App 模式"
+            android:text="Upgrade to App mode"
             android:background="@drawable/button_number_violet_shape"
             style="@style/buttonNumberStyle"
             android:layout_marginBottom="10dp"/>

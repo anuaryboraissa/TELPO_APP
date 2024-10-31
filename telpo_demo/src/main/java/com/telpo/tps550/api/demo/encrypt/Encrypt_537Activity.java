@@ -54,32 +54,32 @@ public class Encrypt_537Activity extends BaseActivity {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == UPDATE_CHIP) {
-                tv_message.setText("正在升级单片机，请勿操作！");
+                tv_message.setText("Upgrading the microcontroller, please do not operate!");
             } else if (msg.what == UPDATE_SUCCESS) {
-                tv_message.setText("升级成功！");
+                tv_message.setText("Upgrade successful！");
             } else if (msg.what == UPDATE_FAIL) {
-                tv_message.setText("升级失败！");
+                tv_message.setText("Upgrade failed！");
             } else if (msg.what == SAVE_KEY_SUCCESS) {
-                tv_message.setText("保存密钥成功！");
+                tv_message.setText("Key saved successfully！");
             } else if (msg.what == SAVE_KEY_FAIL) {
-                tv_message.setText("保存密钥失败！");
+                tv_message.setText("Failed to save key！");
             } else if (msg.what == ENCRYPT_SUCCESS) {
                 String type = msg.getData().getString("type");
                 String plain = msg.getData().getString("plain");
                 String cipher = msg.getData().getString("cipher");
                 String decrypt = msg.getData().getString("decrypt");
                 String txt = type + "\n\n"
-                             + "原文：" + plain + "\n\n"
-                             + "加密成功!\n\n"
-                             + "密文：" + cipher + "\n\n"
-                             + "解密成功!\n\n"
-                             + "解密后的明文：" + decrypt;
+                             + "Plaintext：" + plain + "\n\n"
+                             + "Encryption successful!\n\n"
+                             + "Ciphertext：" + cipher + "\n\n"
+                             + "Decryption successful!\n\n"
+                             + "Decrypted plaintext：" + decrypt;
                 tv_message.setText(txt);
             } else if (msg.what == ENCRYPT_FAIL) {
-                tv_message.setText("加密失败");
+                tv_message.setText("Encryption failed");
             } else if (msg.what == CHIP_MODE) {
                 String mode = msg.getData().getString("appMode");
-                tv_message.setText("芯片模式：" + mode);
+                tv_message.setText("Chip mode：" + mode);
             }
         }
     };
@@ -101,12 +101,12 @@ public class Encrypt_537Activity extends BaseActivity {
         btn_serial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btn_serial.getText().equals("打开串口")) {
+                if (btn_serial.getText().equals("Open Serial Port")) {
                     getState.open();
-                    btn_serial.setText("关闭串口");
+                    btn_serial.setText("Close Serial Port");
                 } else {
                     getState.close();
-                    btn_serial.setText("打开串口");
+                    btn_serial.setText("Open Serial Port");
                 }
             }
         });
@@ -172,7 +172,7 @@ public class Encrypt_537Activity extends BaseActivity {
                 if (cipher != null && decryptPlain != null) {
                     msg.what = ENCRYPT_SUCCESS;
 
-                    String EncryptTypeStr = "SM4 加解密";
+                    String EncryptTypeStr = "SM4 encryption and decryptio";
                     bundle.putString("type", EncryptTypeStr);
                     String str_plain = StringUtil.toHexString(plain_data);  // 明文
                     bundle.putString("plain", str_plain);
@@ -219,12 +219,12 @@ public class Encrypt_537Activity extends BaseActivity {
                 Message msg = new Message();
                 Bundle bundle = new Bundle();
                 if (chipMode == 0) {
-                    bundle.putString("appMode", "App 模式!");
+                    bundle.putString("appMode", "App mode");
                     msg.setData(bundle);
                     msg.what = CHIP_MODE;
                     mHandler.sendMessage(msg);
                 } else if (chipMode == 1) {
-                    bundle.putString("appMode", "非 App 模式!");
+                    bundle.putString("appMode", "non App mode!");
                     msg.setData(bundle);
                     msg.what = CHIP_MODE;
                     mHandler.sendMessage(msg);

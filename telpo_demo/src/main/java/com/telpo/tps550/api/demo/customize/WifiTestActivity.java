@@ -2,6 +2,7 @@ package com.telpo.tps550.api.demo.customize;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
@@ -21,7 +22,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.common.demo.R;
+import com.telpo.tps550.api.demo.HomeActivity;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
+import com.telpo.tps550.api.demo.iccard.PsamCardActivity;
 
 public class WifiTestActivity extends BaseActivity {
     private TextView wifiStatus,cellularStatus;
@@ -40,6 +43,10 @@ public class WifiTestActivity extends BaseActivity {
 
         Button testWifiButton = findViewById(R.id.testWifiButton);
         Button testCellularButton = findViewById(R.id.testCellularButton);
+        Button testEthernet = findViewById(R.id.testEthernet);
+        testEthernet.setOnClickListener(view -> {
+            startActivity(new Intent(WifiTestActivity.this, EthernetTestActivity.class));
+        });
 
         testWifiButton.setOnClickListener(v -> testWifiConnectivity());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

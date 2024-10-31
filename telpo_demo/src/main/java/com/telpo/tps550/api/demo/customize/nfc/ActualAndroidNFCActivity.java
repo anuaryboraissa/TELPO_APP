@@ -27,7 +27,6 @@ import com.common.apiutil.util.SystemUtil;
 import com.common.demo.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 import com.telpo.tps550.api.demo.customize.Constants.ApplicationUtils;
-import com.telpo.tps550.api.demo.nfc.NFCActivityNew;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
