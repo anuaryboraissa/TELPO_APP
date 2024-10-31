@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 import com.telpo.tps550.api.demo.customize.battery.BatteryTest;
 import com.telpo.tps550.api.demo.customize.battery.WakeLockTest;

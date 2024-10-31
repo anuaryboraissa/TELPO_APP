@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 
 import java.io.File;
 import java.io.IOException;

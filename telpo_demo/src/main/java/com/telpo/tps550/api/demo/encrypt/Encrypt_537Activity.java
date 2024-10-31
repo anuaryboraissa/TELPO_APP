@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 import com.common.apiutil.encrypt.State;
 import com.common.apiutil.util.StringUtil;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import static android.view.View.GONE;

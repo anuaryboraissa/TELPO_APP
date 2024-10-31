@@ -10,7 +10,7 @@ import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.HomeActivity;
 import com.telpo.tps550.api.demo.customize.Models.MyItem;
 

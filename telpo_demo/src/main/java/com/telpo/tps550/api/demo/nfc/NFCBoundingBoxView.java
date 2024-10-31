@@ -7,7 +7,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 
 public class NFCBoundingBoxView extends View {
 

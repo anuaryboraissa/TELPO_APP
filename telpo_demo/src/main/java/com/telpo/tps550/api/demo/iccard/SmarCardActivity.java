@@ -27,7 +27,7 @@ import com.common.apiutil.reader.SmartCardReader;
 import com.common.apiutil.util.PowerUtil;
 import com.common.apiutil.util.StringUtil;
 import com.common.apiutil.util.SystemUtil;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 public class SmarCardActivity extends BaseActivity

@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.common.apiutil.reader.SLE4428Reader;
 import com.common.apiutil.util.StringUtil;
 import com.common.apiutil.util.SystemUtil;

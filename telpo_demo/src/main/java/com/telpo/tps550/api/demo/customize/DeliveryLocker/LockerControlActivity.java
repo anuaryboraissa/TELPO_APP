@@ -22,7 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.io.IOException;

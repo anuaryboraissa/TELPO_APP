@@ -16,7 +16,7 @@ import androidx.annotation.RequiresApi;
 
 import com.common.apiutil.system.SystemApiUtil;
 import com.common.apiutil.util.SystemUtil;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.text.ParseException;

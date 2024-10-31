@@ -18,14 +18,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 public class IDCardActivity extends BaseActivity {
-    private static final String ACTION_USB_PERMISSION = "com.common.demo.USB_PERMISSION";
+    private static final String ACTION_USB_PERMISSION = "com.softnet.devicetester.USB_PERMISSION";
     private UsbManager usbManager;
     private UsbDeviceConnection connection;
     private UsbEndpoint endpointIn, endpointOut;

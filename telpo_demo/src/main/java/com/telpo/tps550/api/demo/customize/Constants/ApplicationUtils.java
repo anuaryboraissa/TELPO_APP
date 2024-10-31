@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 public  class ApplicationUtils {
     public static void handleDeviceError(Activity activity, String errorMessage, Runnable retryCallback) {
         activity.setContentView(R.layout.error_hadler);  // Fixed: It was `error_hadler` in your original code

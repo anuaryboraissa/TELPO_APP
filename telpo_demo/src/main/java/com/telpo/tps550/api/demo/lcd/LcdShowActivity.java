@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.common.demo.R;
-import com.common.demo.databinding.ActivityLcdShowBinding;
+import com.softnet.devicetester.R;
+import com.softnet.devicetester.databinding.ActivityLcdShowBinding;
 
 public class LcdShowActivity extends Activity {
     boolean isRun = true;

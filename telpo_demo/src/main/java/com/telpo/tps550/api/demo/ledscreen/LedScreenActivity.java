@@ -21,7 +21,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.common.apiutil.ledscreen.LedScreenUtil;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 

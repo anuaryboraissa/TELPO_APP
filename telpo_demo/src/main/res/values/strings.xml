@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <string name="app_name">Demo_SDK_AS</string>
+    <string name="app_name">Device Tester</string>
 
     <!-- Print -->
     <string name="print_test">Print Test</string>
-    <string name="printer_version">Printer Version：</string>
+    <string name="printer_version">Printer Version?</string>
     <string name="bar_code">Barcode:</string>
     <string name="print_bar_code">Print Barcode</string>
     <string name="D_bar_code">Qrcode:</string>
@@ -15,7 +15,7 @@
     <string name="left_margin">Left Margin:</string>
     <string name="right_margin">Right Margin</string>
     <string name="row_space">Row Space:</string>
-    <string name="font_size">Font Size：</string>
+    <string name="font_size">Font Size?</string>
     <string name="gray_level">Gray Level:</string>
     <string name="print_style_italic_enable">Enable Italic</string>
     <string name="print_style_italic_disable">Disable Italic</string>
@@ -23,7 +23,7 @@
     <string name="print_style_three_height_disable">Disable three height</string>
     <string name="print_style_two_width_enable">Enable two width</string>
     <string name="print_style_two_width_disable">Disable two width</string>
-    <string name="print_content">Print Content：</string>
+    <string name="print_content">Print Content?</string>
     <string name="chinese_example">ZH Example</string>
     <string name="english_example">EN Example</string>
     <string name="persian_example">Persian Example</string>
@@ -42,9 +42,9 @@
     <string name="check_status">Check Status</string>
     <string name="print_georgia_text">Print Georgia</string>
     <string name="print_foreign_text">Print Special Language</string>
-    <string name="printing_wait">Printing, please wait……</string>
+    <string name="printing_wait">Printing, please wait��</string>
     <string name="D_barcode_loading">Qrcode loading</string>
-    <string name="generate_barcode_wait">Generating barcode, please wait……</string>
+    <string name="generate_barcode_wait">Generating barcode, please wait��</string>
     <string name="input_print_data">Please input print data</string>
     <string name="print_paper_width">Paper Width:</string>
     <string name="printer_paper_80mm">80mm</string>
@@ -72,7 +72,7 @@
     <string name="input_command">Please Input Command</string>
     <string name="execute_command">Execute Command</string>
     <string name="watting">Please wait while checking driver version</string>
-    <string name="openDoor">Printer cover open！</string>
+    <string name="openDoor">Printer cover open?</string>
     <string name="hardwareAlarm">Hardware alarm</string>
     <string name="printerReset">Reset Printer/Printer alarm Cleared</string>
     <string name="noPaper">No paper</string>
@@ -83,13 +83,13 @@
     <string name="LowBattery">Low battery, please connect the charger!</string>
     <string name="overTemp">over temp !</string>
     <string name="ptintInit">Printer initialing... Please try again after a few seconds.</string>
-    <string name="outOfLeft">Beyond the left margin！</string>
-    <string name="outOfLine">Beyond the row space！</string>
-    <string name="outOfFont">Beyond the font size！</string>
-    <string name="outOfGray">Beyond the gray level！</string>
-    <string name="outOfCharSpace">Beyond The Char Space！</string>
-    <string name="empty">The content is empty！</string>
-    <string name="lengthNotEnougth">The length is not enough！</string>
+    <string name="outOfLeft">Beyond the left margin?</string>
+    <string name="outOfLine">Beyond the row space?</string>
+    <string name="outOfFont">Beyond the font size?</string>
+    <string name="outOfGray">Beyond the gray level?</string>
+    <string name="outOfCharSpace">Beyond The Char Space?</string>
+    <string name="empty">The content is empty?</string>
+    <string name="lengthNotEnougth">The length is not enough?</string>
     <string name="index_text">Print Text</string>
     <string name="index_pic">Picture/Qrcode</string>
     <string name="index_comm">Print Command</string>
@@ -114,12 +114,12 @@
     <string name="not_support">Linefeed Is Disabled</string>
     <string name="checkPrinterType">Detect printer type</string>
     <string name="check_error">The detection fails, please check whether there is no paper and whether the cover is closed</string>
-    <string name="printContent1">\n             烧烤\n----------------------------\n日期：2015-01-01 16:18:20\n卡号：12378945664\n单号：1001000000000529142\n----------------------------\n  项目    数量   单价  小计\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n冰镇乳鸽    2    23    46\n秘制烤羊腿  1    56    56\n黯然牛排    2    24    48\n烤火鸡      2    50    100\n炭烧鳗鱼    1    40    40\n烤全羊      1    200   200\n荔枝树烧鸡  1    50    50\n冰镇乳鸽    2    23    46\n 合计：1000：00元\n----------------------------\n本卡金额：10000.00\n累计消费：1000.00\n本卡结余：9000.00\n----------------------------\n 地址：广东省佛山市南海区桂城街道桂澜南路45号鹏瑞利广场A317.B-18号铺\n欢迎您的再次光临\n</string>
-    <string name="foreignLanguage">აშო, ჩელა, ვიშო ბუსქა,ოუ, ნანა, ოუ ნანა, ნანინა.სი მონობაშ, გეგაფილი,ოუ, ნანა, სკალი ცოდვა, ნანინა.\nმისამღერი:.ოუ, ნანა, ოუ ნანა, ნანინა…სი უჩხონჩხე, სი უგურე,ოუ, ნანა, სკალი ცოდვა, ნანინა.სი კისერი ელაფირი.ოუ, ნანა, სკალი ცოდვა, ნანინა.მისამღერი..</string>
+    <string name="printContent1">\n             ??\n----------------------------\n???2015-01-01 16:18:20\n???12378945664\n???1001000000000529142\n----------------------------\n  ??    ??   ??  ??\n?????  1    56    56\n????    2    24    48\n???      2    50    100\n????    1    40    40\n???      1    200   200\n?????  1    50    50\n????    2    23    46\n?????  1    56    56\n????    2    24    48\n???      2    50    100\n????    1    40    40\n???      1    200   200\n?????  1    50    50\n????    2    23    46\n?????  1    56    56\n????    2    24    48\n???      2    50    100\n????    1    40    40\n???      1    200   200\n?????  1    50    50\n????    2    23    46\n?????  1    56    56\n????    2    24    48\n???      2    50    100\n????    1    40    40\n???      1    200   200\n?????  1    50    50\n????    2    23    46\n????    2    23    46\n?????  1    56    56\n????    2    24    48\n???      2    50    100\n????    1    40    40\n???      1    200   200\n?????  1    50    50\n????    2    23    46\n ???1000?00?\n----------------------------\n?????10000.00\n?????1000.00\n?????9000.00\n----------------------------\n ????????????????????45??????A317.B-18??\n????????\n</string>
+<!--    <string name="foreignLanguage">???, ????, ???? ?????,??, ????, ?? ????, ??????.?? ???????, ????????,??, ????, ????? ?????, ??????.\n?????????:.??, ????, ?? ????, ??????�?? ????????, ?? ?????,??, ????, ????? ?????, ??????.?? ?????? ???????.??, ????, ????? ?????, ??????.?????????..</string>-->
     <string name="tem_cannt_null">The temperature protection value cannot be empty</string>
     <string name="tem_set_wrong">The temperature protection value is set incorrectly</string>
     <string name="tem_set_success">set successfully</string>
-    <string name="str581">\n             烧烤\n----------------------------\n日期：2015-01-01 16:18:20\n卡号：12378945664\n单号：1001000000000529142\n----------------------------\n  项目          数量    单价    小计\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n秘制烤羊腿     1       56       56\n黯然牛排        2       24       48\n烤火鸡           2       50       100\n炭烧鳗鱼        1       40       40\n烤全羊           1       200     200\n荔枝树烧鸡     1       50       50\n冰镇乳鸽        2       23       46\n 合计：1000：00元\n----------------------------\n本卡金额：10000.00\n累计消费：1000.00\n本卡结余：9000.00\n----------------------------\n 地址：广东省佛山市南海区桂城街道桂澜南路45号鹏瑞利广场A317.B-18号铺\n欢迎您的再次光临\n</string>
+    <string name="str581">\n             ??\n----------------------------\n???2015-01-01 16:18:20\n???12378945664\n???1001000000000529142\n----------------------------\n  ??          ??    ??    ??\n?????     1       56       56\n????        2       24       48\n???           2       50       100\n????        1       40       40\n???           1       200     200\n?????     1       50       50\n????        2       23       46\n?????     1       56       56\n????        2       24       48\n???           2       50       100\n????        1       40       40\n???           1       200     200\n?????     1       50       50\n????        2       23       46\n?????     1       56       56\n????        2       24       48\n???           2       50       100\n????        1       40       40\n???           1       200     200\n?????     1       50       50\n????        2       23       46\n?????     1       56       56\n????        2       24       48\n???           2       50       100\n????        1       40       40\n???           1       200     200\n?????     1       50       50\n????        2       23       46\n?????     1       56       56\n????        2       24       48\n???           2       50       100\n????        1       40       40\n???           1       200     200\n?????     1       50       50\n????        2       23       46\n ???1000?00?\n----------------------------\n?????10000.00\n?????1000.00\n?????9000.00\n----------------------------\n ????????????????????45??????A317.B-18??\n????????\n</string>
     <string name="print_check_info">print check info</string>
     <string name="hal_version">hardware version:</string>
     <string name="soft_version">software version:</string>
@@ -189,13 +189,13 @@
     <string name="idcard_dz">Address:</string>
     <string name="idcard_country">Country:</string>
     <string name="idcard_cn_name">Chinese name:</string>
-    <string name="idcard_version">Idcard version：</string>
-    <string name="idcard_sfhm">ID：</string>
-    <string name="idcard_qzjg">Issuing authority：</string>
+    <string name="idcard_version">Idcard version?</string>
+    <string name="idcard_sfhm">ID?</string>
+    <string name="idcard_qzjg">Issuing authority?</string>
     <string name="idcard_yxqx">"Exp date: "</string>
-    <string name="idcard_txzhm">"Pass number："</string>
-    <string name="idcard_qfcs">"Issues："</string>
-    <string name="idcard_zjlxbs">"ID of the type of document："</string>
+    <string name="idcard_txzhm">"Pass number?"</string>
+    <string name="idcard_qfcs">"Issues?"</string>
+    <string name="idcard_zjlxbs">"ID of the type of document?"</string>
     <string name="idcard_bt_hqsfzxx">bluetooth reading ID card</string>
     <string name="idcard_dqzwy">Open the fingerprint reader</string>
     <string name="idcard_gbzwy">Turn off the fingerprint reader</string>
@@ -288,15 +288,15 @@
     <string name="apdu_to_send">APDU to send</string>
     <string name="send_apdu">Send APDU</string>
     <string name="get_ATR_fail">get ATR fail</string>
-    <string name="get_ATR_success">get ATR success：</string>
+    <string name="get_ATR_success">get ATR success?</string>
     <string name="get_data_success">get data success</string>
     <string name="get_protocol_success">get protocol success</string>
     <string name="power_on">Power on</string>
     <string name="power_off">Power off</string>
     <string name="send_APDU_fail">send APDU fail</string>
-    <string name="send_APDU_success">send APDU success,return：</string>
+    <string name="send_APDU_success">send APDU success,return?</string>
     <string name="send_comm_success">send command success</string>
-    <string name="ic_waring">Tip：\nATR:Reset response instructions\nprotocol：Communication protocol\n"A0A40000023F00":Open the smart kagan directory commands\nAPDU:Smart card communication instruction</string>
+    <string name="ic_waring">Tip?\nATR:Reset response instructions\nprotocol?Communication protocol\n"A0A40000023F00":Open the smart kagan directory commands\nAPDU:Smart card communication instruction</string>
 
     <!-- MoneyBox  -->
     <string name="moneybox_test">MoneyBox Test</string>
@@ -310,7 +310,7 @@
     <!-- IR -->
     <string name="ir_test">IR Test</string>
     <string name="ir_tv_initializing">Initializing,Please Waiting...</string>
-    <string name="ir_tv_staff_stat">Personnel Status：　</string>
+    <string name="ir_tv_staff_stat">Personnel Status??</string>
     <string name="ir_tv_close">Close</string>
     <string name="ir_tv_leave">Leave</string>
 
@@ -403,7 +403,7 @@
     <string name="iperf_text">iPerf for Android</string>
     <color name="WelcomeTextColor">#fffafa</color>
     <string name="i"> i</string>
-    <string name="copyright">Developed by Shir Degani &amp; Yuval Degani © 2011</string>
+    <string name="copyright">Developed by Shir Degani &amp; Yuval Degani � 2011</string>
     <string name="help_button_title">&quot;?&quot;</string>
 
     <string name="nfc_reset">Reset</string>
@@ -545,10 +545,10 @@
     <string name="pos_wigan_output">Wiegand Output</string>
     <string name="pos_wigan_send">Wiegand Send</string>
     <string name="pos_wigan_type">Wiegand Type</string>
-    <string name="pos_door_recv">Door Recv： </string>
-    <string name="pos_key_recv">Key Recv： </string>
-    <string name="pos_magnetic_sensing1_recv">MagneticSensing1 Recv： </string>
-    <string name="pos_magnetic_sensing2_recv">MagneticSensing2 Recv： </string>
+    <string name="pos_door_recv">Door Recv? </string>
+    <string name="pos_key_recv">Key Recv? </string>
+    <string name="pos_magnetic_sensing1_recv">MagneticSensing1 Recv? </string>
+    <string name="pos_magnetic_sensing2_recv">MagneticSensing2 Recv? </string>
     <string name="pos_power_col">Power Control</string>
     <string name="pos_relay_type">Relay Type</string>
     <string name="pos_relay_on">Relay On</string>
@@ -575,8 +575,8 @@
     <string name="pos_gpio_low">low level</string>
     <string name="pos_gpio_high">high level</string>
     <string name="pos_gpio_check">get status</string>
-    <string name="pos_gpio_direction">direction：</string>
-    <string name="pos_gpio_level">level：</string>
+    <string name="pos_gpio_direction">direction?</string>
+    <string name="pos_gpio_level">level?</string>
     <string name="pos_gpio_error">data exception, get gpio status failed</string>
     <string name="pos_beep_col">Beep Control</string>
     <string name="pos_beep_open">Open</string>
@@ -647,7 +647,7 @@
     <string name="lcd_update_btn">Update</string>
     <string name="lcd_update_tip_tv">Place the firmware file that needs to be upgraded /sdcard/project.bin</string>
 
-    <!--主液晶屏显示触摸测试-->
+    <!--??????????-->
     <string name="lcd_screen_light_level">Screen Brightness Test</string>
     <string name="lcd_WhiteBalance">White Balance Test (optional)</string>
     <string name="lcd_please_touch">Please click on the screen to start testing</string>

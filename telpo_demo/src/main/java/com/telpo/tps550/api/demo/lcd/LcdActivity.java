@@ -24,8 +24,8 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.common.demo.R;
-import com.common.demo.databinding.ActivityLcdBinding;
+import com.softnet.devicetester.R;
+import com.softnet.devicetester.databinding.ActivityLcdBinding;
 
 
 public class LcdActivity extends Activity implements View.OnClickListener {

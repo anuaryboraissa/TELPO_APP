@@ -16,7 +16,7 @@ import androidx.annotation.StringRes;
 
 import com.common.CommonConstants;
 import com.common.apiutil.pos.CommonUtil;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.lang.reflect.Field;

@@ -18,8 +18,8 @@ import com.common.CommonConstants;
 import com.common.apiutil.ResultCode;
 import com.common.apiutil.pos.RSTTLReader;
 import com.common.callback.IRSReaderListener;
-import com.common.demo.R;
-import com.common.demo.databinding.ActivityTtlTestBinding;
+import com.softnet.devicetester.R;
+import com.softnet.devicetester.databinding.ActivityTtlTestBinding;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.nio.charset.Charset;

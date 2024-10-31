@@ -15,7 +15,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 
 import java.text.SimpleDateFormat;
 

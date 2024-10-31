@@ -24,7 +24,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.io.File;
@@ -97,7 +97,7 @@ public class CameraActivity extends BaseActivity {
 
             if (photoFile != null) {
                 imageUri = FileProvider.getUriForFile(this,
-                        "com.common.demo.android.fileprovider", photoFile);
+                        "com.softnet.devicetester.android.fileprovider", photoFile);
                 cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
                 startActivityForResult(cameraIntent, CAMERA_CAPTURE_CODE);
             }

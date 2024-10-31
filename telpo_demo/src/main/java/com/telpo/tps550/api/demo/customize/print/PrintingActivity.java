@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.io.File;
@@ -89,7 +89,7 @@ public class PrintingActivity extends BaseActivity {
     // Method to print a PDF file
     private void printPDF() {
         try {
-            Uri pdfUri = Uri.parse(getString(com.common.demo.R.string.file_sdcard_download_sample_pdf));
+            Uri pdfUri = Uri.parse(getString(com.softnet.devicetester.R.string.file_sdcard_download_sample_pdf));
             PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
             if (printManager == null) {
                 Toast.makeText(this, "Printing is not supported on this device.", Toast.LENGTH_LONG).show();

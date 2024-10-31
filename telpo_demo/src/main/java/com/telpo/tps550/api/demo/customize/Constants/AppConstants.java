@@ -1,6 +1,6 @@
 package com.telpo.tps550.api.demo.customize.Constants;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 
 public class AppConstants {
     //assets

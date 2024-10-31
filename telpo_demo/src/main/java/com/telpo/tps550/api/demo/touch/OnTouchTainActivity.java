@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.common.apiutil.system.SystemApiUtil;
-import com.common.demo.databinding.ActivityOntouchTianBinding;
+import com.softnet.devicetester.databinding.ActivityOntouchTianBinding;
 
 /**
  * Created by ljl on 2018/1/29.

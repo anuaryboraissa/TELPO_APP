@@ -16,7 +16,7 @@ import com.common.CommonConstants;
 import com.common.apiutil.ResultCode;
 import com.common.apiutil.deliverylocker.DeliveryLocker;
 import com.common.callback.IUpdateCallBack;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 public class DeliverylockerActivity extends BaseActivity {

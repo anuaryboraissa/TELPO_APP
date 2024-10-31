@@ -13,8 +13,8 @@ import com.common.apiutil.deliverylocker.DeliveryLocker;
 import com.common.apiutil.powercontrol.PowerManager;
 import com.common.apiutil.util.StringUtil;
 import com.common.callback.IUpdateCallBack;
-import com.common.demo.R;
-import com.common.demo.databinding.ActivityPowerManagerBinding;
+import com.softnet.devicetester.R;
+import com.softnet.devicetester.databinding.ActivityPowerManagerBinding;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 public class PowerManageActivity extends BaseActivity implements View.OnClickListener {

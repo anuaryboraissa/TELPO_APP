@@ -28,7 +28,7 @@ import androidx.core.content.ContextCompat;
 
 import androidx.lifecycle.LifecycleOwner;
 
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.mlkit.vision.barcode.BarcodeScanning;
 import com.google.mlkit.vision.barcode.common.Barcode;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.common.demo">
+   >
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -161,43 +161,7 @@
             android:exported="false"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.can.Can2DeptActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
-        <activity
-            android:name="com.telpo.tps550.api.demo.printer.UsbPrinterActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.printer.PrinterActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.printer.PrinterActivitySY581"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.telpo.tps550.api.demo.idcard.TwoInOneReaderActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -208,24 +172,9 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.multireader.MultiReaderActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.megnetic.MegneticActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.moneybox.MoneyBoxActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+
+
         <activity
             android:name="com.telpo.tps550.api.demo.iccard.PsamCardActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -265,51 +214,6 @@
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity
-            android:name="com.telpo.tps550.api.demo.nfc.NfcActivity_tps900"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.nfc.NfcActivity_tps537"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.nfc.NfcActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.telpo.tps550.api.demo.nfc.NFCActivityNew"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-
-            <!-- 配置过滤启动类型 -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.nfc.action.TECH_DISCOVERED"
-                android:resource="@xml/nfc_tech_filter" />
-        </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.decode.DecodeReaderActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.telpo.tps550.api.demo.system.SystemActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
@@ -333,46 +237,6 @@
             android:name="com.telpo.tps550.api.demo.ledscreen.LedScreenActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.can.CanActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.nfc.NfcPN512ActivityMain"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.nfc.MifareDesfireActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.telpo.tps550.api.demo.nfc.FelicaActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustUnspecified|stateHidden">
             <intent-filter>
@@ -513,7 +377,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.common.demo.android.fileprovider"
+            android:authorities="com.softnet.devicetester.android.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

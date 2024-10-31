@@ -12,9 +12,9 @@ import com.common.CommonConstants;
 import com.common.apiutil.ResultCode;
 import com.common.apiutil.pos.CommonUtil;
 import com.common.apiutil.powercontrol.PowerControl;
-import com.common.demo.R;
-import com.common.demo.databinding.ActivityPowerControlBinding;
-import com.common.demo.databinding.ActivitySensorBinding;
+import com.softnet.devicetester.R;
+import com.softnet.devicetester.databinding.ActivityPowerControlBinding;
+import com.softnet.devicetester.databinding.ActivitySensorBinding;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import java.util.Locale;

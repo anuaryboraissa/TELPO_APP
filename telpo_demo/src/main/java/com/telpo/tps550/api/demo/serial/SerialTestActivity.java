@@ -18,7 +18,7 @@ import com.common.apiutil.serial.Serial;
 import com.common.apiutil.util.ShellUtils;
 import com.common.apiutil.util.StringUtil;
 import com.common.apiutil.util.SystemUtil;
-import com.common.demo.R;
+import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import android.app.Activity;
