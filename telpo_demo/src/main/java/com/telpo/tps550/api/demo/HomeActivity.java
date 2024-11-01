@@ -33,6 +33,8 @@ import com.telpo.tps550.api.demo.customize.cards.IDCardActivity;
 import com.telpo.tps550.api.demo.customize.cards.SIMCardDetectionActivity;
 import com.telpo.tps550.api.demo.customize.io.UsbInterfaceActivity;
 import com.telpo.tps550.api.demo.customize.nfc.ActualAndroidNFCActivity;
+import com.telpo.tps550.api.demo.customize.print.PrintWithBluetoothActivity;
+import com.telpo.tps550.api.demo.customize.print.PrintWithWifiActivity;
 import com.telpo.tps550.api.demo.customize.print.PrintingActivity;
 import com.telpo.tps550.api.demo.encrypt.Encrypt_537Activity;
 import com.telpo.tps550.api.demo.iccard.IccActivityNew;
@@ -89,7 +91,22 @@ public class HomeActivity extends BaseActivity {
     }
     //print
     public void devicePrint(){
-        startActivity(new Intent(HomeActivity.this, PrintingActivity.class));
+        AlertDialog.Builder dialog = new AlertDialog.Builder(HomeActivity.this);
+        dialog.setTitle("SELECT MODE");
+        dialog.setMessage("EITHER WI-FI OR BLUETOOTH CONNECTED PRINTER");
+        dialog.setNegativeButton("WIFI", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // 软解码
+                startActivity(new Intent(HomeActivity.this, PrintWithWifiActivity.class));
+            }
+        });
+        dialog.setPositiveButton("BLUETOOTH", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // 硬解码
+                startActivity(new Intent(HomeActivity.this, PrintWithBluetoothActivity.class));
+            }
+        });
+        dialog.show();
     }
 
     public void deviceLcd(){
