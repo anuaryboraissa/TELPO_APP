@@ -44,8 +44,10 @@ public class PDFAdapterHelper {
 
     public void createPDFFile(String path) {
         String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
-        if(new File(path).exists())
-            new File(path).delete();
+//        if(new File(path).exists()) {
+//            Log.i("PRINTER","DELETE FILE");
+//            new File(path).delete();
+//        }
         try {
             Document document = new Document();
             //Save
@@ -121,7 +123,7 @@ public class PDFAdapterHelper {
             document.close();
             Toast.makeText(context,"Sucess", Toast.LENGTH_SHORT).show();
 
-            printPDF();
+            printPDF(path);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -163,12 +165,12 @@ public class PDFAdapterHelper {
         document.add(new Paragraph(""));
     }
 
-    private void printPDF(){
+    private void printPDF(String path){
         try {
-            PrintDocumentAdapter printDocumentAdapter = new PdfDocumentAdapter(context,Comman.getAppPath(context)+"test_pdf.pdf");
-            printManager.print("Document",printDocumentAdapter,new PrintAttributes.Builder().build());
+            PrintDocumentAdapter printDocumentAdapter = new PdfDocumentAdapter(context,path);
+            printManager.print("Document: ",printDocumentAdapter,new PrintAttributes.Builder().build());
         }catch (Exception ex){
-            Log.e("Harshita",""+ex.getMessage());
+            Log.e("PRINTER","MESSAGE ERROR: "+ex.getMessage());
             Toast.makeText(context, "Can't read pdf file", Toast.LENGTH_SHORT).show();
 
         }

@@ -66,19 +66,72 @@ public class PrintWithWifiActivity extends AppCompatActivity {
                         btn_create_pdf.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Log.e("PRINTER","BUTTON CLICKED ===========> ");
+//                                Log.e("PRINTER", "BUTTON CLICKED ===========> ");
+//                                PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
+//                                OutputStream outputStream = null;
+//                                try {
+//                                    // Get or create the directory path
+//                                    String directoryPath = getApplicationContext().getFilesDir().getPath() + "/Demo_SDK_AS";
+//                                    File directory = new File(directoryPath);
+//                                    if (!directory.exists()) {
+//                                        boolean dirCreated = directory.mkdirs();  // Create directory if it doesn’t exist
+//                                        if (!dirCreated) {
+//                                            Log.e("PRINTER", "Failed to create directory: " + directoryPath);
+//                                            return;
+//                                        }
+//                                    }
+//
+//                                    // Specify the full file path including the file name
+//                                    String filePath = directoryPath + "/test_pdf.pdf";
+//                                    File pdfFile = new File(filePath);
+//                                    outputStream = new FileOutputStream(pdfFile);
+//                                    Log.e("PRINTER", "OUTPUT STREAM ===========> " + outputStream);
+//
+//                                    // Create PDF helper and generate PDF
+//                                    PDFAdapterHelper helper = new PDFAdapterHelper(PrintWithWifiActivity.this, printManager, outputStream);
+//                                    helper.createPDFFile(filePath);
+//                                } catch (FileNotFoundException e) {
+//                                    Log.e("PRINTER", "OUTPUT STREAM error===========> " + e.getMessage());
+//                                    throw new RuntimeException(e);
+//                                }
+                                Log.e("PRINTER", "BUTTON CLICKED ===========> ");
                                 PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
-                                OutputStream outputStream= null;
+                                OutputStream outputStream = null;
+
                                 try {
-                                    String path=(Comman.getAppPath(PrintWithWifiActivity.this));
+                                    // Get or create the directory path
+                                    String directoryPath = getApplicationContext().getFilesDir().getPath() + "/Demo_SDK_AS";
+                                    File directory = new File(directoryPath);
 
-                                    outputStream = new FileOutputStream(path);
-                                    Log.e("PRINTER","OUTPUT STREAM ===========> "+outputStream);
-                                    PDFAdapterHelper helper=new PDFAdapterHelper(PrintWithWifiActivity.this,printManager,outputStream);
+                                    // Check if the path exists and is a directory
+                                    if (directory.exists() && !directory.isDirectory()) {
+                                        // Delete if it exists as a file instead of a directory
+                                        boolean deleted = directory.delete();
+                                        if (!deleted) {
+                                            Log.e("PRINTER", "Failed to delete existing file: " + directoryPath);
+                                            return;
+                                        }
+                                    }
+                                    // Create directory if it doesn’t exist
+                                    if (!directory.exists()) {
+                                        boolean dirCreated = directory.mkdirs();
+                                        if (!dirCreated) {
+                                            Log.e("PRINTER", "Failed to create directory: " + directoryPath);
+                                            return;
+                                        }
+                                    }
 
-                                    helper.createPDFFile(path+"test_pdf.pdf");
+                                    // Specify the full file path including the file name
+                                    String filePath = directoryPath + "/test_pdf.pdf";
+                                    File pdfFile = new File(filePath);
+                                    outputStream = new FileOutputStream(pdfFile);
+                                    Log.e("PRINTER", "OUTPUT STREAM ===========> " + outputStream);
+
+                                    // Create PDF helper and generate PDF
+                                    PDFAdapterHelper helper = new PDFAdapterHelper(PrintWithWifiActivity.this, printManager, outputStream);
+                                    helper.createPDFFile(filePath);
                                 } catch (FileNotFoundException e) {
-                                    Log.e("PRINTER","OUTPUT STREAM error===========> "+e.getMessage());
+                                    Log.e("PRINTER", "OUTPUT STREAM error===========> " + e.getMessage());
                                     throw new RuntimeException(e);
                                 }
 
@@ -98,5 +151,4 @@ public class PrintWithWifiActivity extends AppCompatActivity {
                 })
                 .check();
     }
-
 }

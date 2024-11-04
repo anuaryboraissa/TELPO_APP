@@ -789,6 +789,7 @@
     <string name="find_printers">Find Printers</string>
     <string name="company_xyz">Company XYZ</string>
     <string name="print_invoice">Print Invoice</string>
+    <string name="lcd_torch">LCD Torch</string>
 
 
 </resources>

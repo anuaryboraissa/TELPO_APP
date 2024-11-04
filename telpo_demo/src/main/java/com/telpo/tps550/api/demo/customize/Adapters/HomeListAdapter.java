@@ -132,9 +132,6 @@ public class HomeListAdapter extends ArrayAdapter<MyItem> {
                         case 16:
                             context.deviceIdentifyIDCard();
                             break;
-                        case 17:
-                            context.devicePcsc();
-                            break;
                         case 18:
                             context.psamCard();
                             break;
@@ -152,12 +149,6 @@ public class HomeListAdapter extends ArrayAdapter<MyItem> {
                             break;
                         case 24:
                             context.deviceSerial();
-                            break;
-                        case 25:
-                            context.deviceSimpleSubLCD();
-                            break;
-                        case 26:
-                            context.devicePowerControl();
                             break;
                         case 27:
                             context.deviceDeliveryLocker();

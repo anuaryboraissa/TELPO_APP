@@ -26,6 +26,9 @@ import androidx.core.content.ContextCompat;
 import com.softnet.devicetester.R;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
@@ -38,7 +41,6 @@ public class PrintWithBluetoothActivity extends BaseActivity {
     private BluetoothAdapter bluetoothAdapter;
     private BluetoothSocket bluetoothSocket;
     private OutputStream outputStream;
-
     private Spinner spinnerPrinters;
     private TextView statusText;
 
@@ -122,11 +124,40 @@ public class PrintWithBluetoothActivity extends BaseActivity {
                 runOnUiThread(() ->statusText.setText("Connected to " + selectedDeviceName) );
                 PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
                 PDFAdapterHelper helper=new PDFAdapterHelper(PrintWithBluetoothActivity.this,printManager,outputStream);
-                helper.createPDFFile(Comman.getAppPath(PrintWithBluetoothActivity.this)+"test_pdf.pdf");
+                //start
+                // Get or create the directory path
+                String directoryPath = getApplicationContext().getFilesDir().getPath() + "/Demo_SDK_AS";
+                File directory = new File(directoryPath);
 
+                // Check if the path exists and is a directory
+                if (directory.exists() && !directory.isDirectory()) {
+                    // Delete if it exists as a file instead of a directory
+                    boolean deleted = directory.delete();
+                    if (!deleted) {
+                        Log.e("PRINTER", "Failed to delete existing file: " + directoryPath);
+                        return;
+                    }
+                }
+                // Create directory if it doesn’t exist
+                if (!directory.exists()) {
+                    boolean dirCreated = directory.mkdirs();
+                    if (!dirCreated) {
+                        Log.e("PRINTER", "Failed to create directory: " + directoryPath);
+                        return;
+                    }
+                }
+                // Specify the full file path including the file name
+                String filePath = directoryPath + "/test_pdf.pdf";
+//                    File pdfFile = new File(filePath);
+//                    outputStream = new FileOutputStream(pdfFile);
+//                    Log.e("PRINTER", "OUTPUT STREAM ===========> " + outputStream);
+                // Create PDF helper and generate PDF
+//                    PDFAdapterHelper helper = new PDFAdapterHelper(PrintWithWifiActivity.this, printManager, outputStream);
+                helper.createPDFFile(filePath);
+                //end
+//                helper.createPDFFile(Comman.getAppPath(PrintWithBluetoothActivity.this)+"test_pdf.pdf");
                 // Close the connection
                 closeBluetoothConnection();
-
             } catch (IOException e) {
                 Log.e(TAG, "Error printing data", e);
                 runOnUiThread(() -> statusText.setText("Failed to print: " + e.getMessage()));
@@ -160,7 +191,6 @@ public class PrintWithBluetoothActivity extends BaseActivity {
         // For lower versions, Bluetooth permission is automatically granted
         return false;
     }
-
     private void requestBluetoothPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             ActivityCompat.requestPermissions(

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Demo_SDK_AS</string>
+    <string name="app_name">Device Tester</string>
 
     <!-- Print -->
     <string name="print_test">Print Test</string>

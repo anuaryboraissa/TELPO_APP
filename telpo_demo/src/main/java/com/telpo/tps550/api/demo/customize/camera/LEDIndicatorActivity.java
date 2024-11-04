@@ -5,6 +5,7 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
@@ -27,9 +28,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.softnet.devicetester.R;
+import com.telpo.tps550.api.demo.HomeActivity;
 import com.telpo.tps550.api.demo.bean.BaseActivity;
 
 import com.common.apiutil.util.SystemUtil;
+import com.telpo.tps550.api.demo.customize.print.PrintWithBluetoothActivity;
+import com.telpo.tps550.api.demo.pos.LedActivity;
+
 public class LEDIndicatorActivity extends BaseActivity {
     private static final String CHANNEL_ID = "led_channel";
     private NotificationManager notificationManager;
@@ -59,6 +64,11 @@ public class LEDIndicatorActivity extends BaseActivity {
         Button ledTestButton = findViewById(R.id.buttonLEDTest);
         Button btnStartBlink = findViewById(R.id.btnStartBlink);
         Button btnStopBlink = findViewById(R.id.btnStopBlink);
+//        Button btnTorch = findViewById(R.id.ledTorch);
+//
+//        btnTorch.setOnClickListener(view -> {
+//            startActivity(new Intent(LEDIndicatorActivity.this, LedActivity.class));
+//        });
 
         // Set Click Listener for LED Test Button
         ledTestButton.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +82,6 @@ public class LEDIndicatorActivity extends BaseActivity {
                 }
             }
         });
-
         try {
             String[] cameraIds = cameraManager.getCameraIdList();
             for (String id : cameraIds) {

@@ -48,9 +48,10 @@ public class PdfDocumentAdapter extends PrintDocumentAdapter {
         OutputStream out = null;
         try{
             File file = new File(path);
+            Log.e("PRINTER","FILE: "+file);
             in = new FileInputStream(file);
             out = new FileOutputStream(parcelFileDescriptor.getFileDescriptor());
-
+            Log.e("PRINTER","in stream: "+in+"  , out stream: "+out);
             byte[]buff = new byte[16384];
             int size;
             while ((size = in.read(buff)) >= 0 && !cancellationSignal.isCanceled()){
@@ -76,7 +77,7 @@ public class PdfDocumentAdapter extends PrintDocumentAdapter {
                 }
 
             }catch (IOException ex){
-                Log.e("PRINTER", ""+ex.getMessage());
+                Log.e("PRINTER", "print message: "+ex.getMessage());
             }
         }
     }

@@ -42,5 +42,13 @@ android:background="#f5f5f5">
         android:layout_below="@id/btnStartBlink"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true" />
+<!--    <Button-->
+<!--        android:id="@+id/ledTorch"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/lcd_torch"-->
+<!--        android:layout_below="@id/btnStopBlink"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_centerHorizontal="true" />-->
 
 </RelativeLayout>
