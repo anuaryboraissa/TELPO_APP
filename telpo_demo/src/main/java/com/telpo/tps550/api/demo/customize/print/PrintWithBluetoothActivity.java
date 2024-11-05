@@ -182,7 +182,7 @@ public class PrintWithBluetoothActivity extends BaseActivity {
             if (outputStream != null) outputStream.close();
             if (bluetoothSocket != null) bluetoothSocket.close();
         } catch (IOException e) {
-            Log.e("InvoiceActivity", "Error closing Bluetooth connection", e);
+            Log.e(TAG, "Error closing Bluetooth connection", e);
         }
     }
     @Override
