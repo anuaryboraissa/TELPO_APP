@@ -122,41 +122,8 @@ public class PrintWithBluetoothActivity extends BaseActivity {
                 outputStream = bluetoothSocket.getOutputStream();
                 String selectedDeviceName = (String) spinnerPrinters.getSelectedItem();
                 runOnUiThread(() ->statusText.setText("Connected to " + selectedDeviceName) );
-                PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
-                PDFAdapterHelper helper=new PDFAdapterHelper(PrintWithBluetoothActivity.this,printManager,outputStream);
-                //start
-                // Get or create the directory path
-                String directoryPath = getApplicationContext().getFilesDir().getPath() + "/Demo_SDK_AS";
-                File directory = new File(directoryPath);
-
-                // Check if the path exists and is a directory
-                if (directory.exists() && !directory.isDirectory()) {
-                    // Delete if it exists as a file instead of a directory
-                    boolean deleted = directory.delete();
-                    if (!deleted) {
-                        Log.e("PRINTER", "Failed to delete existing file: " + directoryPath);
-                        return;
-                    }
-                }
-                // Create directory if it doesn’t exist
-                if (!directory.exists()) {
-                    boolean dirCreated = directory.mkdirs();
-                    if (!dirCreated) {
-                        Log.e("PRINTER", "Failed to create directory: " + directoryPath);
-                        return;
-                    }
-                }
-                // Specify the full file path including the file name
-                String filePath = directoryPath + "/test_pdf.pdf";
-//                    File pdfFile = new File(filePath);
-//                    outputStream = new FileOutputStream(pdfFile);
-//                    Log.e("PRINTER", "OUTPUT STREAM ===========> " + outputStream);
-                // Create PDF helper and generate PDF
-//                    PDFAdapterHelper helper = new PDFAdapterHelper(PrintWithWifiActivity.this, printManager, outputStream);
-                helper.createPDFFile(filePath);
-                //end
-//                helper.createPDFFile(Comman.getAppPath(PrintWithBluetoothActivity.this)+"test_pdf.pdf");
-                // Close the connection
+                //format content to print
+                printReceipt();
                 closeBluetoothConnection();
             } catch (IOException e) {
                 Log.e(TAG, "Error printing data", e);
@@ -166,6 +133,49 @@ public class PrintWithBluetoothActivity extends BaseActivity {
             }
         }).start();
     }
+
+    private void printReceipt() {
+        try {
+            // Set up the printer for receipt formatting
+            outputStream.write(new byte[]{0x1B, 0x61, 0x01}); // Center alignment for header
+
+            // Print header
+            outputStream.write("Your Store Name\n".getBytes());
+            outputStream.write("123 Main St.\n".getBytes());
+            outputStream.write("City, State, ZIP\n".getBytes());
+            outputStream.write("Tel: (123) 456-7890\n".getBytes());
+            outputStream.write("===============================\n".getBytes());
+
+            // Reset alignment to left for item list
+            outputStream.write(new byte[]{0x1B, 0x61, 0x00}); // Left alignment
+            outputStream.write("Item            Qty     Price\n".getBytes());
+            outputStream.write("-------------------------------\n".getBytes());
+
+            // Print items
+            outputStream.write("Item A          1       $4.99\n".getBytes());
+            outputStream.write("Item B          2       $9.99\n".getBytes());
+            outputStream.write("Item C          1       $2.49\n".getBytes());
+
+            outputStream.write("-------------------------------\n".getBytes());
+
+            // Subtotal, tax, and total
+            outputStream.write(String.format("%-20s %7s\n", "Subtotal", "$17.47").getBytes());
+            outputStream.write(String.format("%-20s %7s\n", "Tax (5%)", "$0.87").getBytes());
+            outputStream.write(String.format("%-20s %7s\n", "Total", "$18.34").getBytes());
+
+            // Footer message
+            outputStream.write("===============================\n".getBytes());
+            outputStream.write("Thank you for your purchase!\n".getBytes());
+            outputStream.write("Visit us again!\n\n\n".getBytes());
+
+            // Flush the output stream
+            outputStream.flush();
+
+        } catch (IOException e) {
+            Log.e(TAG, "Error printing receipt", e);
+        }
+    }
+
 
     private void closeBluetoothConnection() {
         try {
